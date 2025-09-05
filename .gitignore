@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Env
+api/.env
+.env
+.env.*
+
+# Docker volumes
+pgdata/
+grafana_data/
+
+# Editor
+.vscode/
+.idea/
