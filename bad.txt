@@ -1,1 +1,1 @@
-GITHUB_TOKEN=ghp_abcdefghijklmnopqrstuvwxyz1234567890ab
+GITHUB_TOKEN=ghp_abcdefghijklmnopqrstuvwxyz0123456789 # 36文字
