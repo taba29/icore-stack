@@ -1,0 +1,8 @@
+const express = require('express')
+const { PORT } = require('./src/config')
+const { ping, pool } = require('./src/db')
+const app = express()
+app.get('/healthz', async (_req,res)=>{ try{ res.json({ ok: await ping() }) } catch(e){ res.status(500).json({ ok:false, error:e.message }) }})
+process.on('SIGINT', async ()=>{ await pool.end(); process.exit(0) })
+process.on('SIGTERM', async ()=>{ await pool.end(); process.exit(0) })
+app.listen(PORT, ()=>console.log(`[api] http://localhost:${PORT}`))
